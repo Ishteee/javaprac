@@ -1,4 +1,4 @@
-Download mariadb-java-client-3.5.1.jar and place it in lib folder of WEB-INF of webapp.
+Download mariadb-java-client-3.5.2.jar and place it in lib folder of WEB-INF of webapp.
 Project → Properties → Java Build Path → Libraries → Classpath → Add JAR’s → choose this jar file which is inside WEB-INF folder.
 
 Commands for MariaDB:
