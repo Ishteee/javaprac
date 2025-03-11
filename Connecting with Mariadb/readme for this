@@ -1,0 +1,11 @@
+Download mariadb-java-client-3.5.1.jar and place it in lib folder of WEB-INF of webapp.
+Project → Properties → Java Build Path → Libraries → Classpath → Add JAR’s → choose this jar file which is inside WEB-INF folder.
+
+Commands for MariaDB:
+1. show databases;
+2. create database mydb;
+3. use mydb;
+4. create table authentication (uid int(3), password varchar(10), role varchar(10));
+5. desc authentication
+6. insert into authentication (uid, password, role) values (101, "star", "Manager"), (102, "sand", "Asst.Mgr"), (103, "sony", "HR");
+7. select * from authentication;
