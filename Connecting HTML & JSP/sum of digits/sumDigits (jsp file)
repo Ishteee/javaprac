@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+pageEncoding="ISO-8859-1"%> <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"> <title>Insert title here</title> 
+</head>
+<body>
+<%
+int n = Integer.parseInt(request.getParameter("num")); 
+int sum = 0;
+int rem = 0;
+while (n>0)
+{
+  rem = n%10; 
+  n = n/10; 
+  sum += rem;
+} 
+out.println(sum); 
+%>
+</body> 
+</html>
