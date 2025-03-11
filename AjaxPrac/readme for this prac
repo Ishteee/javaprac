@@ -1,2 +1,4 @@
 put json-simple jar inside lib folder which is inside WEB-INF folder and 
 then go to Project -> Properties -> Java Build Path -> Click on Classpath -> Add Jars -> select your json simple jar from the lib folder which is inside WEB-INF folder.
+
+PLEASE RUN ajaxdemo.jsp FILE
