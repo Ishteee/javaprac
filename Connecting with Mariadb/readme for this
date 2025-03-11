@@ -9,3 +9,5 @@ Commands for MariaDB:
 5. desc authentication
 6. insert into authentication (uid, password, role) values (101, "star", "Manager"), (102, "sand", "Asst.Mgr"), (103, "sony", "HR");
 7. select * from authentication;
+
+PLS RUN THE FRONTEND FILE
