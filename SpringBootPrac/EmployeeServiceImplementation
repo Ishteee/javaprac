@@ -1,0 +1,52 @@
+package com.example.demo;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import lombok.AllArgsConstructor;
+
+@Service
+@AllArgsConstructor
+public class EmployeeServiceImplementation implements EmployeeService{
+
+	@Autowired
+	private EmployeeRepository empRepo;
+	
+	@Override
+	public Employee createEmployee( Employee employee) {
+		// TODO Auto-generated method stub
+		return empRepo.save(employee);
+	}
+
+	@Override
+	public List<Employee> getEmployees() {
+		// TODO Auto-generated method stub
+		return empRepo.findAll();
+	}
+
+	@Override
+	public Employee getEmployeeById(Long empId) {
+		// TODO Auto-generated method stub
+		Optional<Employee>empRecord = empRepo.findById(empId);
+		return empRecord.get();
+	}
+
+	@Override
+	public Employee updateEmployee(Employee employee) {
+		Employee existingEmp = empRepo.findById(employee.getEmpId()).get();
+		existingEmp.setEmail(employee.getEmail());
+		existingEmp.setFirstName(employee.getFirstName());
+		existingEmp.setLastName(employee.getLastName());
+		return empRepo.save(existingEmp);
+	}
+
+	@Override
+	public void deleteEmployee(Long empId) {
+		// TODO Auto-generated method stub
+		empRepo.deleteById(empId);
+	}
+
+}
