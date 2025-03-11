@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"> 
+<title>Insert title here</title> 
+</head>
+<body>
+  <form method="post" action="maxOutOf3.jsp">
+  <label for="num1">Enter first number:</label>
+  <input type="text" name="num1" required><br><br>
+  <label for="num2">Enter second number:</label>
+  <input type="text" name="num2" required><br><br>
+  <label for="num3">Enter third number:</label>
+  <input type="text" name="num3" required><br><br>
+  <input type="submit" value="Find Maximum">
+</body> 
+</html>
