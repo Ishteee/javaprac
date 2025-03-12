@@ -1,0 +1,66 @@
+Step 1: Initialize the Spring Boot Project 
+
+1.  Go to  https://start.spring.io/ 
+
+2.  Select "Maven" as the build tool. 
+
+3.  Add dependencies: 
+○  Spring Web (for REST API development) 
+○  Spring Data JPA (for database interactions) 
+○  Lombok (to reduce boilerplate code) 
+○  MySQL Driver (to connect with MySQL database) 
+                    
+4.  Click "Generate" to download the project as a ZIP file. 
+                    
+Step 2: Import the Project into Spring Tool Suite (STS) 
+5.  Extract the ZIP file to a known location. 
+                    
+6.  Open Spring Tool Suite (STS). 
+                    
+7.  Go to File → Import → Existing Maven Projects. 
+                    
+8.  Browse to the extracted folder and click "Finish" to import the project. 
+                    
+Step 3: Create the User Entity Class 
+                    
+9.  Navigate to src/main/java/com/example/demo. 
+                    
+10. Right-click on com.example.demo → New → Class. 
+                    
+11. Name the class User.java and define attributes with @Entity, @Id, and @Column annotations.
+                    
+Step 4: Create the Repository Interface 
+                    
+12. Right-click on com.example.demo → New → Interface. 
+                    
+13. Name it UserRepo.java. 
+                    
+14. Extend JpaRepository<User, Long> to provide built-in database operations. 
+                    
+Step 5: Create the Service Interface 
+                    
+15. Right-click on com.example.demo → New → Interface. 
+                    
+16. Name it UserService.java.
+                    
+17. Define CRUD methods for user operations.
+                    
+Step 6: Create the Controller Class 
+                    
+18. Right-click on com.example.demo → New → Class. 
+                    
+19. Name it UserController.java. 
+                    
+20.  Use @RestController and @RequestMapping("/users") to define API endpoints. 
+                    
+Step 7: Run the Spring Boot Application 
+                    
+21.  Navigate to src/main/java/com/example/demo/DemoApplication.java. 
+                    
+22.  Run DemoApplication.java as a Spring Boot application. 
+                    
+23.  If everything is correct, you should see an output similar to: 
+Started DemoApplication in 19.315 seconds (process running for 20.799) 
+                                           
+24.  Verify the database connection: The user table should be created in the MySQL database 
+automatically.
